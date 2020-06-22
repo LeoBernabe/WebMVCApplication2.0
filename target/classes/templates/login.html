@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head> 
+	<title>LGeratech.com</title> 
+	<link rel="stylesheet" href="/css/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head> 
+<body> 
+	<header id="header"> 
+		<h1 id="title">WELCOME TO LGERATECH.COM!</h1>
+		<p id="subtitle" >Login page</p> 
+	</header> 
+	<div id="body-container">
+		<form th:action="@{/login}" method="post">
+			<input type="text" name="username" placeholder="Enter your Username">
+			<input type="password" name="password" placeholder="Enter your Password">
+			<div th:if="${param.error}" style="color: red; padding-right:35px; float:right;">
+				Invalid username and password.
+			</div><br>
+			<div th:if="${param.logout}" style="color: blue; padding-right:35px; float:right;">
+				You have been logged out.
+			</div><br>
+			<a href="/registration" style="padding-right:35px; float:right;">Sign up</a>
+			<div><input type="submit" value="Sign In"/></div>
+		</form>
+	</div>
+	<footer id="footer"> 
+		<p>Created on May 2020, by <a href = "http://lgeratech.com/">LGeratech.com</a></p> 
+	</footer> 
+</body> 
+</html> 

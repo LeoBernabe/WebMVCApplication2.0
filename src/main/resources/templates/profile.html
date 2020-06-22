@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html xmlns:th="http://www.thymeleaf.org">   
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>LGeratech.com</title> 
+	<link rel="stylesheet" href="/css/style.css">
+</head> 
+<body> 
+	<header id="header"> 
+		<h1 id="title">WELCOME TO LGERATECH.COM!</h1> 
+		<p id="subtitle" >Profile page</p> 
+	</header> 
+	<nav> 
+       <ul class="nav-container"> 
+         <li class="nav-item"><a href = "/home">Home</a></li> 
+         <li class="nav-item active"><a href = "/profile">Profile</a></li> 
+         <li class="nav-item"><a href = "/login?logout">Logout</a></li> 
+        </ul> 
+     </nav> 
+	<div id="profile-container">
+		<br><img src="http://lgeratech.com/cropped-lionlogi4-png" alt="face" height="130" width="150"><br><br>
+		<label>Name: </label><strong th:text="${user.name}"></strong><br>
+		<label>Age: </label><strong th:text="${user.age}"></strong><br>
+		<label>Gender: </label><strong th:text="${user.gender}"></strong><br>
+	</div>
+	<footer id="footer"> 
+		<p>Created on May 2020, by <a href = "http://lgeratech.com/">LGeratech.com</a></p> 
+	</footer> 
+</body> 
+</html> 
